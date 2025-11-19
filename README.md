@@ -106,8 +106,8 @@ Outbound C2 Traffic	T1071	Command & Control
 Malicious IP Communication	T1588	Reconnaissance
 Unauthorized Instance Behavior	T1078	Privilege Abuse
 Automated Containment	T1562	Defense Evasion
-🧠 LESSONS LEARNED
 
+🧠 LESSONS LEARNED
 Event-driven automation drastically reduces response time
 
 GuardDuty custom threat lists improve accuracy
