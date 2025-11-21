@@ -1,8 +1,10 @@
+![banner](documentation/screenshots/aegis-banner.png)
+
+
 🟣 WAKANDA CYBER DEFENSE NETWORK (WCDN)
 ⚡ AEGIS AUTOMATION PROTOCOL
 Codename: OPERATION STORMBREAKER
 🧭 MISSION OBJECTIVE
-
 Design and deploy an automated cloud incident response pipeline using AWS native tools.
 This system detects malicious activity using GuardDuty and instantly responds through Lambda, SNS, and EventBridge.
 
