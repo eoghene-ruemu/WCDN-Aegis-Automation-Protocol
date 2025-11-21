@@ -1,0 +1,84 @@
+/* 🛡️ Aegis Automation Protocol Theme (emerald response grid) */
+:root {
+  --bg-1: #052e16;      /* emerald */
+  --bg-2: #02180c;      /* darker emerald */
+  --bg-3: #000000;      /* black */
+  --accent: #4ade80;    /* neon green */
+  --accent-soft: #22c55e;
+}
+
+/* GLOBAL PAGE STYLE */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, var(--bg-1) 0, var(--bg-2) 45%, var(--bg-3) 100%);
+  color: #e5e7eb;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 2.4rem;
+}
+
+.tagline {
+  margin: 0;
+  color: #9ca3af;
+  font-size: 0.98rem;
+}
+
+.repo-link {
+  margin-top: 12px;
+}
+
+.repo-link a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.repo-link a:hover {
+  text-decoration: underline;
+}
+
+/* CONTENT */
+.content {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 0 20px 40px;
+}
+
+/* CARDS */
+.card {
+  background: rgba(5, 30, 20, 0.9);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+  border: 1px solid #065f46;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.card ul {
+  padding-left: 1.2rem;
+}
