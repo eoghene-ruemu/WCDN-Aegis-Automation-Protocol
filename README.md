@@ -1,167 +1,72 @@
+# 🛡️ WCDN – Aegis Automation Protocol
+### Automated Cloud Incident Response • GuardDuty • EventBridge • Lambda
+
 ![banner](documentation/screenshots/aegis-banner.png)
 
+---
 
-🟣 WAKANDA CYBER DEFENSE NETWORK (WCDN)
-⚡ AEGIS AUTOMATION PROTOCOL
-Codename: OPERATION STORMBREAKER
-🧭 MISSION OBJECTIVE
-Design and deploy an automated cloud incident response pipeline using AWS native tools.
-This system detects malicious activity using GuardDuty and instantly responds through Lambda, SNS, and EventBridge.
+## 🔍 Project Overview
+The **Aegis Automation Protocol** simulates a full AWS cloud incident response workflow, including threat detection with GuardDuty, automated alerting via EventBridge and SNS, and Lambda-powered remediation.  
+This project demonstrates real-world cloud defense engineering and SOAR-style automation in an enterprise-ready AWS environment.
 
-This project demonstrates:
+---
 
-Serverless automation
+## 🧠 Skills Demonstrated
+- Cloud Incident Response  
+- GuardDuty Triage & Investigation  
+- EventBridge Rule Engineering  
+- Lambda Automation (Python)  
+- SNS Alerting Pipelines  
+- Threat List Management  
+- CloudTrail Forensics  
 
-Cloud incident response
+---
 
-Event-driven architecture
+## 🛠️ Tools & Technologies
+**AWS GuardDuty, Security Hub, EventBridge, Lambda, SNS, CloudTrail, EC2, VPC**
 
-Threat intelligence integration
+---
 
-GuardDuty custom threat lists
+# 📸 Screenshots
+Evidence collected during the automation workflow:
 
-API event correlation
+- **GuardDuty Finding**
+  ![gd](documentation/screenshots/guardduty-finding.png)
 
-Automated containment
+- **EventBridge Rule**
+  ![eb](documentation/screenshots/eventbridge-rule.png)
 
-⚙️ AEGIS PIPELINE BLUEPRINT
-GuardDuty Findings  →  EventBridge Rule  →  Lambda Auto-Response
-                                ↓
-                            SNS Alerts
+- **Lambda Remediation Function**
+  ![lambda](documentation/screenshots/lambda-remediation.png)
 
-🔥 OPERATION LOG (Methodology)
-Phase 1 — Threat Detection Setup
+- **SNS Alert Notification**
+  ![sns](documentation/screenshots/sns-alert.png)
 
-Enabled GuardDuty
+- **Threat List / Indicators**
+  ![threatlist](documentation/screenshots/threat-list.png)
 
-Created a custom threat list hosted in S3
+---
 
-Added known malicious IPs
+# 📘 Documentation
+- `documentation/methodology.md`  
+- `documentation/findings.md`  
+- `reports/executive-summary.pdf`
 
-Verified threat list ingestion in GuardDuty
+---
 
-Phase 2 — Triggering the Signal
+# 🧩 Lessons Learned
+- Automation closes detection → response gaps  
+- Threat list maintenance is essential  
+- EventBridge is powerful for correlation  
+- CloudTrail is critical for root cause validation  
 
-Simulated multiple malicious behaviors:
+---
 
-Outbound attempts to malicious IPs
+# ⚖️ Ethical Notice
+All cloud resources were created for educational purposes inside isolated AWS accounts. No production systems were impacted.
 
-Suspicious recon traffic
+---
 
-Unauthorized port scanning
+# 🏁 Summary
+This project showcases a complete automated cloud defense workflow using AWS-native tools, simulating enterprise-grade incident response.
 
-Invalid IAM actions
-
-GuardDuty successfully generated findings.
-
-Phase 3 — EventBridge Automation
-
-Created EventBridge rule:
-
-Trigger: GuardDuty Finding = HIGH / MEDIUM
-
-Action: Invoke Lambda
-
-Tested trigger using sample GuardDuty findings
-
-Phase 4 — Lambda Auto-Containment
-
-Created Lambda function ("JARVIS-Lockdown") to:
-
-Stop compromised EC2 instance
-
-Tag instance as isolated
-
-Publish message to SNS
-
-Log event to CloudWatch
-
-Phase 5 — SNS Alerting
-
-SNS notifications delivered:
-
-Instance ID
-
-Type of malicious activity
-
-Time of detection
-
-Containment action taken
-
-Phase 6 — Validation
-
-Verified:
-
-EC2 instance status changed to stopped
-
-CloudTrail captured API events
-
-GuardDuty findings matched expected behaviors
-
-SNS alerts delivered instantly
-
-Lambda logs confirmed successful execution
-
-🎯 MITRE ATT&CK MAPPINGS
-Technique	MITRE ID	Tactic
-Outbound C2 Traffic	T1071	Command & Control
-Malicious IP Communication	T1588	Reconnaissance
-Unauthorized Instance Behavior	T1078	Privilege Abuse
-Automated Containment	T1562	Defense Evasion
-
-🧠 LESSONS LEARNED
-Event-driven automation drastically reduces response time
-
-GuardDuty custom threat lists improve accuracy
-
-Lambda is ideal for fast containment actions
-
-SNS provides real-time visibility
-
-Combined telemetry (GD + CT + VPC Logs) offers full context
-
-🚀 NEXT STEPS
-
-Add remediation for IAM key exposure
-
-Quarantine EC2 instances using security groups
-
-Trigger Slack or Teams webhook alerts
-
-Expand automation to multi-account GuardDuty
-
-📂 REPOSITORY STRUCTURE
-WCDN-Aegis-Automation-Protocol/
-│── README.md
-│── lambda/
-│     └── jarvis-lockdown.py   (optional if you want to upload)
-│── eventbridge/
-│     └── rule.json            (optional)
-│── documentation/
-│     ├── methodology.md
-│     ├── findings.md
-│     └── screenshots/
-└── reports/
-      └── executive-summary.pdf
-
-## 📸 Screenshots
-
-This project includes visual evidence of the automated cloud incident response pipeline.  
-Screenshots are stored in `documentation/screenshots/`.
-
-### Included Evidence:
-- EC2 victim and attacker instances
-- GuardDuty threat findings  
-- Custom threat list stored in S3  
-- SNS alert topic configuration  
-- EventBridge rule triggering the Lambda automation  
-- Lambda quarantine function code  
-- Email alert generated by the automation workflow  
-
-These screenshots demonstrate that the detection, aggregation, notification, and automated containment pipeline is fully operational.
-
-
-📜 ETHICAL DISCLAIMER
-
-All activities were performed in a secure cloud training environment.
-No production systems or real organizations were impacted.
